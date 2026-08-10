@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { z } from 'zod';
-import { VehicleSchema } from './schemas/Vehicle.Schema';
+import { VehicleSchema } from './schemas/vehicle.schema';
 
 axios.defaults.baseURL = 'https://dummyjson.com/';
 
