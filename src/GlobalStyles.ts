@@ -1,12 +1,12 @@
 import { createGlobalStyle } from 'styled-components';
 import 'modern-normalize';
 
-export const GlobalStyle = createGlobalStyle`
+export const GlobalStyles = createGlobalStyle`
 body {
-    background-color: #050505;
+    background-color: #FFFFFF;
     font-family: 'Poppins', sans-serif;
     font-weight: 400;
-    color: #FFFFFF
+    color: #050505
 }
 
 ul {
@@ -56,18 +56,26 @@ button {
     margin-left: auto;
     margin-right: auto;
 
-    @media (min-width: 834px) {
-        width: 834px;
-        padding-left: 27px;
-        padding-right: 27px;
+    @media (min-width: 768px) {
+        width: 768px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+     @media (min-width: 1024px) {
+        width: 1024px;
+        padding-left: 25px;
+        padding-right: 25px;
         margin-left: auto;
         margin-right: auto;
     }
 
     @media (min-width: 1440px) {
         width: 1440px;
-        padding-left: 34px;
-        padding-right: 34px;
+        padding-left: 30px;
+        padding-right: 30px;
         margin-left: auto;
         margin-right: auto;
     }
