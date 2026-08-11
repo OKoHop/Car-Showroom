@@ -1,4 +1,14 @@
+import { useEffect } from 'react';
+import { getVehicles } from '../../redux/vehiclesOperation';
+import { useAppDispatch } from '../../hooks/dispatchHook';
+
 export const Home = () => {
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    dispatch(getVehicles());
+  }, [dispatch]);
+
   return (
     <>
       <p>
