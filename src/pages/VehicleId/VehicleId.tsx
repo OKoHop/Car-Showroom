@@ -1,12 +1,10 @@
+import { useParams } from 'react-router-dom';
+
 export const VehicleId = () => {
+  const { vehicleId } = useParams();
   return (
     <>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias eos
-        quibusdam quis, excepturi perferendis obcaecati pariatur, quam dolorem
-        omnis, ex assumenda eius deserunt. Ducimus similique dolorem ut
-        corporis, voluptatum aliquam?
-      </p>
+      <p>Now you can see product cart with id - {vehicleId}</p>
     </>
   );
 };

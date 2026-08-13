@@ -21,7 +21,6 @@ export const getVehicles = createAsyncThunk<
 >('vehicles/getVehicles', async (_, thunkAPI) => {
   try {
     const response = await axios.get('products/category/vehicle');
-    console.log(response.data);
     return response.data;
   } catch {
     return thunkAPI.rejectWithValue({
