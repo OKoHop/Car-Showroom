@@ -1,15 +1,20 @@
-import { Field, Form, Formik } from 'formik';
+import { Field, Formik } from 'formik';
 import * as Yup from 'yup';
+import { StyledForm } from './FilterForm.style';
 
 type initialValues = {
   filter: string;
+};
+
+type setSearchQuery = {
+  setSearchQuery: React.Dispatch<React.SetStateAction<string>>;
 };
 
 const filterSchema = Yup.object().shape({
   filter: Yup.string().required('Fill the form. Please.'),
 });
 
-export const FilterForm = () => {
+export const FilterForm = ({ setSearchQuery }: setSearchQuery) => {
   const initialValues: initialValues = {
     filter: '',
   };
@@ -22,14 +27,13 @@ export const FilterForm = () => {
         console.log(values);
       }}
     >
-      <Form
+      <StyledForm
         onChange={value => {
-          console.log(value.target.value);
+          setSearchQuery(value.target.value);
         }}
       >
         <Field name="filter" />
-        <button type="submit">Search</button>
-      </Form>
+      </StyledForm>
     </Formik>
   );
 };
