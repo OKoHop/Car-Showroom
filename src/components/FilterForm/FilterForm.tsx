@@ -1,6 +1,6 @@
-import { Field, Formik } from 'formik';
+import { Formik } from 'formik';
 import * as Yup from 'yup';
-import { StyledForm } from './FilterForm.style';
+import { StyledFilter, StyledForm } from './FilterForm.style';
 
 type initialValues = {
   filter: string;
@@ -32,7 +32,7 @@ export const FilterForm = ({ setSearchQuery }: setSearchQuery) => {
           setSearchQuery(value.target.value);
         }}
       >
-        <Field name="filter" />
+        <StyledFilter name="filter" />
       </StyledForm>
     </Formik>
   );
