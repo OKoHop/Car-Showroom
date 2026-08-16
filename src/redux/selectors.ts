@@ -7,3 +7,8 @@ export const useVehicle = () => {
   );
   return vehicles;
 };
+
+export const useIsLoading = () => {
+  const isLoading = useSelector((state: State) => state.vehicles.isLoading);
+  return isLoading;
+};

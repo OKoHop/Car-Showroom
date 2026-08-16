@@ -12,7 +12,7 @@ export type Products = {
   warrantyInformayion: string;
   shippingInformation: string;
   availabilityStatus: string;
-  reviews: Array<object>;
+  reviews: Review[];
   returnPolicy: string;
   images: string[];
   thumbnail: string;
@@ -33,4 +33,12 @@ export type VehiclesState = {
 
 export type State = {
   vehicles: VehiclesState;
+};
+
+export type Review = {
+  rating: number;
+  comment: string;
+  date: string;
+  reviewerName: string;
+  reviewerEmail: string;
 };
