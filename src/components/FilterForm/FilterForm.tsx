@@ -32,7 +32,7 @@ export const FilterForm = ({ setSearchQuery }: setSearchQuery) => {
           setSearchQuery(value.target.value);
         }}
       >
-        <StyledFilter name="filter" />
+        <StyledFilter name="filter" placeholder="Find your vehicle" />
       </StyledForm>
     </Formik>
   );

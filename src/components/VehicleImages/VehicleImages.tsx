@@ -1,4 +1,5 @@
 import { nanoid } from 'nanoid';
+import { StyledImgList, StyledLi } from './VehicleImage.style';
 
 type ImagesProps = {
   images: string[];
@@ -6,10 +7,14 @@ type ImagesProps = {
 
 export const VehicleImages = ({ images }: ImagesProps) => {
   return (
-    <>
+    <StyledImgList>
       {images.map((image: string) => {
-        return <img key={nanoid()} src={image} alt="vehicle" />;
+        return (
+          <StyledLi key={nanoid()}>
+            <img src={image} alt="vehicle" />
+          </StyledLi>
+        );
       })}
-    </>
+    </StyledImgList>
   );
 };

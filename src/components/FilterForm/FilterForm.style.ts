@@ -11,4 +11,9 @@ export const StyledForm = styled(Form)`
 
 export const StyledFilter = styled(Field)`
   width: 100%;
+  height: 30px;
+
+  &::placeholder {
+    text-align: center;
+  }
 `;
